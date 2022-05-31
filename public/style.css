@@ -195,10 +195,14 @@ body .center .select-button {
   text-align: center;
   cursor: pointer;
   border-radius: 50%;
-  background: #f74d4d;
+  /* background: #f74d4d;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
-  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569));
+  background-image: -moz-gradient(linear, left top, left bottom, color-stop(0%, #f74d4d), color-stop(100%, #f86569)); */
   box-shadow: 0 15px #e24f4f;
+  background: #e55050;
+  border-radius: 100px;
+  box-shadow: inset -2px 2px 2px 0px #ef9393, inset 2px -2px 2px 0px rgb(113 17 17 / 30%), inset 0px 0px 40px 15px #de2424, 1px 1px 0 0 #d32020, 2px 2px 0 0 #c61e1e, 3px 3px 0 0 #b81c1c, 4px 4px 0 0 #ab1a1a, 5px 5px 0 0 #9e1818, 6px 6px 0 0 #901616, 7px 7px 0 0 #881414, 8px 8px 0 0 #831414, 9px 9px 0 0 #7f1313, 10px 10px 0 0 #7a1212, 11px 11px 0 0 #761212, 12px 12px 0 0 #711111, 13px 13px 0 0 #711111, 14px 14px 0 0 #711111, 15px 15px 0 0 #711111, 16px 16px 0 0 #711111, 17px 17px 0 0 #711111, 18px 18px 0 0 #711111, 19px 19px 0 0 #711111, 20px 20px 0 0 #711111, 19px 21px 1pc 1px rgb(113 17 17 / 10%), 18px 22px 1px 1px rgb(113 17 17 / 10%), 17px 23px 1px 1px rgb(113 17 17 / 10%), 16px 24px 1px 1px rgb(113 17 17 / 10%), 15px 25px 1px 1px rgb(113 17 17 / 10%), 14px 26px 2px 1px rgb(113 17 17 / 10%), 13px 27px 3px 1px rgb(113 17 17 / 10%), 12px 28px 4px 1px rgb(113 17 17 / 10%), 11px 29px 5px 1px rgb(113 17 17 / 10%), 10px 30px 6px 1px rgb(113 17 17 / 10%), 9px 31px 7px 1px rgb(113 17 17 / 10%), 20px 20px 4px 1px #711111;
+  transition: all 0.3s ease;
 }
 body .center .select-button:active {
   box-shadow: 0 0 #e24f4f;
@@ -211,4 +215,10 @@ body .center .select-button:active {
   -ms-transition: 0.1s all ease-out;
   -o-transition: 0.1s all ease-out;
   transition: 0.1s all ease-out;
+  background: #e55050;
+  border-radius: 100px;
+  box-shadow: inset -2px 2px 2px 0px #ef9393, inset 2px -2px 2px 0px rgb(113 17 17 / 30%), inset 0px 0px 40px 15px #de2424, 1px 1px 0 0 #d32020, 2px 2px 0 0 #c61e1e, 3px 3px 0 0 #b81c1c, 4px 4px 0 0 #ab1a1a, 5px 5px 0 0 #9e1818, 6px 6px 0 0 #901616, 7px 7px 0 0 #881414, 8px 8px 0 0 #831414, 9px 9px 0 0 #7f1313, 10px 10px 0 0 #7a1212, 11px 11px 0 0 #761212, 12px 12px 0 0 #711111, 13px 13px 0 0 #711111, 14px 14px 0 0 #711111, 15px 15px 0 0 #711111, 16px 16px 0 0 #711111, 17px 17px 0 0 #711111, 18px 18px 0 0 #711111, 19px 19px 0 0 #711111, 20px 20px 0 0 #711111, 19px 21px 1pc 1px rgb(113 17 17 / 10%), 18px 22px 1px 1px rgb(113 17 17 / 10%), 17px 23px 1px 1px rgb(113 17 17 / 10%), 16px 24px 1px 1px rgb(113 17 17 / 10%), 15px 25px 1px 1px rgb(113 17 17 / 10%), 14px 26px 2px 1px rgb(113 17 17 / 10%), 13px 27px 3px 1px rgb(113 17 17 / 10%), 12px 28px 4px 1px rgb(113 17 17 / 10%), 11px 29px 5px 1px rgb(113 17 17 / 10%), 10px 30px 6px 1px rgb(113 17 17 / 10%), 9px 31px 7px 1px rgb(113 17 17 / 10%), 20px 20px 4px 1px #711111;
+  transition: all 0.3s ease;
 }
+
+
