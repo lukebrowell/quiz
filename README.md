@@ -1,6 +1,4 @@
-<p align="center">
-  <img width="400px" src="https://github.com/bufferapp/buzzer/blob/master/public/buzzer-logo.svg?raw=true&sanitize=true" alt="Buzzer"/>
-</p>
+
 Quizz app for running your own quizzes or game shows! Uses websockets to sent messages. Not secure.
 
 ## Running the app
