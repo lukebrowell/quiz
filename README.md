@@ -1,5 +1,5 @@
 
-Quizz app for running your own quizzes or game shows! Uses websockets to sent messages. Not secure.
+Quiz app for running your own quizzes or game shows! Uses websockets to sent messages. Not secure.
 
 ## Running the app
 
