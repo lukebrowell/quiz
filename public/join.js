@@ -50,6 +50,6 @@ getUserInfo()
 const audio = new Audio('https://www.soundjay.com/buttons/button-10.mp3')
 const button = document.querySelector('button.buzzer')
 
-button.addEventListener('click', (e) => {
+button.addEventListener('mousedown', (e) => {
   audio.play()
 })
