@@ -47,6 +47,8 @@ https://dxbuzzer.herokuapp.com/host
 
 heroku maintenance:on
 heroku maintenance:off
+heroku ps:scale web=0
+heroku ps:scale web=1
 
 ```sh
  5542  git add .

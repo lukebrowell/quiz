@@ -12,14 +12,15 @@ html
     div.container
       form.view.js-join
         img(src="/lets-play.png" class="main-image")
-        h2="Let's play!"
+        h2="Let's Dance!"
         input(type='text' name='name' placeholder='Your name' required='required')
         input(type='number' name='team' placeholder='Your team number' required='required')
         button(type='submit')='Join!'
 
       div.view.js-joined.hidden
-        div.center
-          button.js-buzzer.buzzer()='Buzz!!!'
+        div.btncontainer
+          div.center
+            button.select-button.js-buzzer.buzzer()='Buzz!!!'
         p.js-joined-info=""
         button.js-edit.secondary='Change teams'
 
