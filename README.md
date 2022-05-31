@@ -39,20 +39,3 @@ Join a team                | Buzz in                   | Host view              
 
 MIT
 
-
-### Using on Heroku
-
-https://dxbuzzer.herokuapp.com/
-https://dxbuzzer.herokuapp.com/host
-
-heroku maintenance:on
-heroku maintenance:off
-heroku ps:scale web=0
-heroku ps:scale web=1
-
-```sh
- 5542  git add .
- 5543  git commit -m 'init'
- 5544  git push heroku main
- 5545  heroku logs --tail
-```
