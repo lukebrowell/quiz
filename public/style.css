@@ -62,7 +62,7 @@ header {
 }
 
 .buzzer-mode {
-  background-color: rgb(255 255 255)
+  background-color: rgb(255 255 255);
   color: rgb(243, 175, 185);
 }
 
@@ -177,7 +177,6 @@ body {
 body .btncontainer {
   position: relative;
   display: block;
-  width: 400px;
   height: 400px;
 }
 
@@ -185,10 +184,12 @@ body .center {
   left: 50%;
   top: 50%;
   position: absolute;
-  margin-left: -100px;
+  margin-left: -110px;
   margin-top: -100px;
 }
 .buzzer {
+  padding: 0;
+  margin: 0;
   width: 200px;
   height: 180px;
   line-height: 100px;
@@ -201,6 +202,7 @@ body .center {
 }
 .buzzer:active {
   box-shadow: 0 0 #e24f4f;
+  transform: translate(0px, 15px);
   -webkit-transform: translate(0px, 15px);
   -moz-transform: translate(0px, 15px);
   -ms-transform: translate(0px, 15px);

@@ -1,55 +1,38 @@
+import * as el from './modules/join-selectors.js';
+import {user, loadUserInfo, saveUserInfo} from './modules/UserInfo.js'
+
 const socket = io()
-const body = document.querySelector('.js-body')
-const form = document.querySelector('.js-join')
-const joined = document.querySelector('.js-joined')
-const buzzer = document.querySelector('.js-buzzer')
-const joinedInfo = document.querySelector('.js-joined-info')
-const editInfo = document.querySelector('.js-edit')
 
-let user = {}
-
-const getUserInfo = () => {
-  user = JSON.parse(localStorage.getItem('user')) || {}
-  if (user.name) {
-    form.querySelector('[name=name]').value = user.name
-    form.querySelector('[name=team]').value = user.team
-  }
-}
-const saveUserInfo = () => {
-  localStorage.setItem('user', JSON.stringify(user))
-}
-
-form.addEventListener('submit', (e) => {
+el.form.addEventListener('submit', (e) => {
   e.preventDefault()
-  user.name = form.querySelector('[name=name]').value
-  user.team = form.querySelector('[name=team]').value
+  user.name = el.form.querySelector('[name=name]').value
+  user.team = el.form.querySelector('[name=team]').value
+
   if (!user.id) {
     user.id = Math.floor(Math.random() * new Date())
   }
-  socket.emit('join', user)
+  
+  console.log('emitting join event to server with user payload')
+  socket.emit('join', {...user})
   saveUserInfo()
-  joinedInfo.innerText = `${user.name} on Team ${user.team}`
-  form.classList.add('hidden')
-  joined.classList.remove('hidden')
-  body.classList.add('buzzer-mode')
+  el.joinedInfo.innerText = `${user.name} on Team ${user.team}`
+  el.form.classList.add('hidden')
+  el.joined.classList.remove('hidden')
+  el.body.classList.add('buzzer-mode')
 })
 
-buzzer.addEventListener('click', (e) => {
-  socket.emit('buzz', user)
+el.buzzer.addEventListener('mousedown', () => {
+  console.log('emitting buzz event to server with user payload')
+  socket.emit('buzz', {...user})
 })
 
-editInfo.addEventListener('click', () => {
-  joined.classList.add('hidden')
-  form.classList.remove('hidden')
-  body.classList.remove('buzzer-mode')
+el.editInfo.addEventListener('click', () => {
+  el.joined.classList.add('hidden')
+  el.form.classList.remove('hidden')
+  el.body.classList.remove('buzzer-mode')
 })
 
-getUserInfo()
+loadUserInfo()
 
-
-const audio = new Audio('https://www.soundjay.com/buttons/button-10.mp3')
-const button = document.querySelector('button.buzzer')
-
-button.addEventListener('mousedown', (e) => {
-  audio.play()
-})
+const audio = new Audio('./buzz.mp3')
+el.button.addEventListener('mousedown', () => audio.play())

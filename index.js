@@ -26,8 +26,8 @@ const getData = () => ({
 app.use(express.static('public'))
 app.set('view engine', 'pug')
 
-app.get('/', (req, res) => res.render('index', { title }))
-app.get('/host', (req, res) => res.render('host', Object.assign({ title }, getData())))
+app.get('/', (_req, res) => res.render('index', { title }))
+app.get('/host', (_req, res) => res.render('host', Object.assign({ title }, getData())))
 
 io.on('connection', (socket) => {
   socket.on('join', (user) => {
